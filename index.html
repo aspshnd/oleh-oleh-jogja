@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oleh-Oleh Jogja - Toko Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a class="text-2xl font-semibold text-yellow-600 flex items-center" href="#">
+                <img alt="Logo toko oleh-oleh Jogja berupa huruf J berwarna kuning dengan latar putih" class="mr-2 rounded" height="40" src="https://storage.googleapis.com/a1aa/image/287494ca-5921-4d53-2ce1-90805a6e7dbc.jpg" width="40" />
+                Oleh-Oleh Jogja
+            </a>
+            <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
+                <a class="hover:text-yellow-600 transition" href="#">Beranda</a>
+                <a class="hover:text-yellow-600 transition" href="#products">Produk</a>
+                <a class="hover:text-yellow-600 transition" href="#about">Tentang Kami</a>
+                <a class="hover:text-yellow-600 transition" href="#contact">Kontak</a>
+            </nav>
+            <div class="flex items-center space-x-4">
+                <button aria-label="Toggle menu" class="text-yellow-600 focus:outline-none md:hidden" id="menu-btn">
+                    <i class="fas fa-bars fa-lg"></i>
+                </button>
+                <button aria-label="Buka keranjang belanja" class="relative text-yellow-600 focus:outline-none" id="cart-btn">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
+                    <span class="absolute -top-2 -right-2 bg-red-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center font-semibold" id="cart-count" style="display:none">0</span>
+                </button>
+            </div>
+        </div>
+        <nav class="hidden bg-white shadow-md md:hidden" id="mobile-menu">
+            <a class="block px-4 py-3 border-b border-gray-200 hover:bg-yellow-50 text-yellow-700 font-semibold" href="#">Beranda</a>
+            <a class="block px-4 py-3 border-b border-gray-200 hover:bg-yellow-50 text-yellow-700 font-semibold" href="#products">Produk</a>
+            <a class="block px-4 py-3 border-b border-gray-200 hover:bg-yellow-50 text-yellow-700 font-semibold" href="#about">Tentang Kami</a>
+            <a class="block px-4 py-3 hover:bg-yellow-50 text-yellow-700 font-semibold" href="#contact">Kontak</a>
+        </nav>
+    </header>
+    <!-- Hero Section -->
+    <section class="bg-yellow-100 py-16 px-6 md:px-0">
+        <div class="container mx-auto flex flex-col md:flex-row items-center md:space-x-12">
+            <div class="md:w-1/2 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-yellow-700 mb-4">
+                    Nikmati Oleh-Oleh Khas Jogja
+                </h1>
+                <p class="text-yellow-800 mb-6 text-lg md:text-xl">
+                    Pilihan terbaik oleh-oleh asli Jogja, langsung dari pengrajin lokal. Manis, gurih, dan penuh kenangan.
+                </p>
+                <a class="inline-block bg-yellow-600 hover:bg-yellow-700 text-white font-semibold px-8 py-3 rounded shadow transition" href="#products">
+                    Lihat Produk
+                </a>
+            </div>
+            <div class="md:w-1/2 mt-10 md:mt-0">
+                <img alt="Beragam produk oleh-oleh khas Jogja seperti bakpia, gudeg, dan kerajinan tangan yang tersusun rapi" class="rounded-lg shadow-lg mx-auto" height="400" src="images/tugu1.jpeg" width="600" />
+            </div>
+        </div>
+    </section>
+    <!-- Products Section -->
+    <section class="container mx-auto px-6 py-16" id="products">
+        <h2 class="text-3xl font-bold text-yellow-700 mb-10 text-center">
+            Produk Oleh-Oleh Jogja
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8" id="product-list">
+            <!-- Product 1 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col" data-id="1" data-name="Bakpia Bima Isi 10" data-price="19000" data-image="images/bakpia/bakpia7.jpeg">
+                <img alt="Bakpia khas Jogja, kue bulat kecil berwarna coklat keemasan dengan isian berbagai rasa" class="w-full h-48 object-cover" height="300" src="images/bakpia/bakpia7.jpeg" width="400" />
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-xl font-semibold text-yellow-700 mb-2">
+                        Bakpia Bima isi 10
+                    </h3>
+                    <p class="text-gray-600 flex-grow">
+                        Kue tradisional Jogja dengan isian coklat, keju, kacang hijau, ubi ungu, cocok untuk oleh-oleh keluarga.
+                    </p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-yellow-600 font-bold text-lg">
+                            Rp19.000
+                        </span>
+                        <button class="add-to-cart bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded transition" type="button">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            Beli
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 2 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col" data-id="2" data-name="Bakpia Bima Isi 20" data-price="34000" data-image="images/bakpia/bakpia7.jpeg">
+                <img alt="Bakpia khas Jogja, kue bulat kecil berwarna coklat keemasan dengan isian berbagai rasa" class="w-full h-48 object-cover" height="300" src="images/bakpia/bakpia7.jpeg" width="400" />
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-xl font-semibold text-yellow-700 mb-2">
+                        Bakpia Bima isi 20
+                    </h3>
+                    <p class="text-gray-600 flex-grow">
+                        Kue tradisional Jogja dengan isian coklat, keju, kacang hijau, ubi ungu, cocok untuk oleh-oleh keluarga.
+                    </p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-yellow-600 font-bold text-lg">
+                            Rp34.000
+                        </span>
+                        <button class="add-to-cart bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded transition" type="button">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            Beli
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col" data-id="3" data-name="Bakpia Bima mix isi 20" data-price="36000" data-image="images/bakpia/bakpia10.webp">
+                <img alt="Bakpia khas Jogja, kue bulat kecil berwarna coklat keemasan dengan isian berbagai rasa" class="w-full h-48 object-cover" height="300" src="images/bakpia/bakpia10.webp" width="400" />
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-xl font-semibold text-yellow-700 mb-2">
+                        Bakpia Bima Mix isi 20
+                    </h3>
+                    <p class="text-gray-600 flex-grow">
+                         Kue tradisional Jogja dengan isian coklat, keju, kacang hijau, ubi ungu, cocok untuk oleh-oleh keluarga.
+                    </p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-yellow-600 font-bold text-lg">
+                            Rp36.000
+                        </span>
+                        <button class="add-to-cart bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded transition" type="button">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            Beli
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col" data-id="4" data-name="Bolu kukus Oma Opa" data-price="20000" data-image="images/bolu/bolu1.jpg">
+                <img alt="Jajanan pasar khas Jogja berupa bolu kukus dengan berbagai toping" class="w-full h-48 object-cover" height="300" src="images/bolu/bolu1.jpg" width="400" />
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-xl font-semibold text-yellow-700 mb-2">
+                        Oma opa cakery Godean kyai mojo
+                    </h3>
+                    <p class="text-gray-600 flex-grow">
+                        Beragam kue tradisional Jogja yang manis dan legit, cocok untuk cemilan dan oleh-oleh.
+                    </p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-yellow-600 font-bold text-lg">
+                            Rp20.000
+                        </span>
+                        <button class="add-to-cart bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded transition" type="button">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            Beli
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col" data-id="5" data-name="Pisang Kemul Original" data-price="18000" data-image="images/pisang/pisang2.jpg">
+                <img alt="Pisang Kemul by Putra Ragil" class="w-full h-48 object-cover" height="300" src="images/pisang/pisang2.jpg" width="400" />
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-xl font-semibold text-yellow-700 mb-2">
+                        Pisang Kemul Original
+                    </h3>
+                    <p class="text-gray-600 flex-grow">
+                        Pisang Kemul by Putra Ragil adalah camilan kekinian dari pisang goreng tepung renyah dengan aneka topping dan rasa...
+                    </p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-yellow-600 font-bold text-lg">
+                            Rp18.000
+                        </span>
+                        <button class="add-to-cart bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded transition" type="button">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            Beli
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 6 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col" data-id="6" data-name="Pisang Kemul Rasa Gula Aren" data-price="19000" data-image="images/pisang/pisang3.jpg">
+                <img alt="Pisang Kemul by Putra Ragil" class="w-full h-48 object-cover" height="300" src="images/pisang/pisang3.jpg" width="400" />
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-xl font-semibold text-yellow-700 mb-2">
+                        Pisang Kemul Rasa Gula Palem
+                    </h3>
+                    <p class="text-gray-600 flex-grow">
+                        Pisang Kemul by Putra Ragil adalah camilan kekinian dari pisang goreng tepung renyah dengan aneka topping dan rasa...
+                    </p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-yellow-600 font-bold text-lg">
+                            Rp19.000
+                        </span>
+                        <button class="add-to-cart bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded transition" type="button">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            Beli
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 7 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col" data-id="7" data-name="Pisang Kemul Rasa Cokelat" data-price="22000" data-image="images/pisang/pisang9.jpeg">
+                <img alt="Pisang Kemul by Putra Ragil" class="w-full h-48 object-cover" height="300" src="images/pisang/pisang9.jpeg" width="400" />
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-xl font-semibold text-yellow-700 mb-2">
+                        Pisang Kemul Rasa Cokelat
+                    </h3>
+                    <p class="text-gray-600 flex-grow">
+                        Pisang Kemul by Putra Ragil adalah camilan kekinian dari pisang goreng tepung renyah dengan aneka topping dan rasa...
+                    </p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-yellow-600 font-bold text-lg">
+                            Rp22.000
+                        </span>
+                        <button class="add-to-cart bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded transition" type="button">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            Beli
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 8 -->
+            <div class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col" data-id="8" data-name="Pisang Kemul Rasa Keju" data-price="22000" data-image="images/pisang/pisang6.jpg">
+                <img alt="Pisang Kemul by Putra Ragil" class="w-full h-48 object-cover" height="300" src="images/pisang/pisang6.jpg" width="400" />
+                <div class="p-4 flex flex-col flex-grow">
+                    <h3 class="text-xl font-semibold text-yellow-700 mb-2">
+                        Pisang Kemul Rasa Keju
+                    </h3>
+                    <p class="text-gray-600 flex-grow">
+                        Pisang Kemul by Putra Ragil adalah camilan kekinian dari pisang goreng tepung renyah dengan aneka topping dan rasa...
+                    </p>
+                    <div class="mt-4 flex items-center justify-between">
+                        <span class="text-yellow-600 font-bold text-lg">
+                            Rp22.000
+                        </span>
+                        <button class="add-to-cart bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded transition" type="button">
+                            <i class="fas fa-shopping-cart mr-2"></i>
+                            Beli
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section class="bg-yellow-50 py-16 px-6 md:px-0" id="about">
+        <div class="container mx-auto max-w-4xl text-center">
+            <h2 class="text-3xl font-bold text-yellow-700 mb-6">
+                Tentang Oleh-Oleh Jogja
+            </h2>
+            <p class="text-yellow-800 text-lg leading-relaxed">
+                Kami adalah toko online yang menyediakan berbagai macam oleh-oleh khas Jogja asli, langsung dari pengrajin dan produsen lokal. Kami berkomitmen untuk menghadirkan produk berkualitas dengan harga terjangkau agar Anda dapat membawa pulang kenangan manis dari Jogja.
+            </p>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section class="container mx-auto px-6 py-16" id="contact">
+        <h2 class="text-3xl font-bold text-yellow-700 mb-10 text-center">
+            Kontak Kami
+        </h2>
+        <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-8">
+            <form action="#" class="space-y-6" method="POST">
+                <div>
+                    <label class="block text-yellow-700 font-semibold mb-2" for="name">
+                        Nama
+                    </label>
+                    <input class="w-full border border-yellow-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" id="name" name="name" placeholder="Masukkan nama Anda" required type="text" />
+                </div>
+                <div>
+                    <label class="block text-yellow-700 font-semibold mb-2" for="email">
+                        Email
+                    </label>
+                    <input class="w-full border border-yellow-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" id="email" name="email" placeholder="Masukkan email Anda" required type="email" />
+                </div>
+                <div>
+                    <label class="block text-yellow-700 font-semibold mb-2" for="message">
+                        Pesan
+                    </label>
+                    <textarea class="w-full border border-yellow-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" id="message" name="message" placeholder="Tulis pesan Anda" required rows="4"></textarea>
+                </div>
+                <button class="bg-yellow-600 hover:bg-yellow-700 text-white font-semibold px-6 py-3 rounded w-full transition" type="submit">
+                    Kirim Pesan
+                </button>
+            </form>
+            <div class="mt-8 text-yellow-700 text-center space-y-2">
+                <p>
+                    <i class="fas fa-map-marker-alt mr-2"></i>
+                    Jl. Godean Sleman 
+                </p>
+                <p>
+                    <i class="fas fa-phone mr-2"></i>
+                    +62 882-2528-0321
+                </p>
+                <p>
+                    <i class="fas fa-envelope mr-2"></i>
+                    info@oleholehjogja.com
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Cart Modal -->
+    <div aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" id="cart-modal">
+        <div class="bg-white rounded-lg shadow-lg max-w-3xl w-full max-h-[80vh] overflow-y-auto p-6 relative">
+            <button aria-label="Tutup keranjang" class="absolute top-4 right-4 text-yellow-600 hover:text-yellow-800 focus:outline-none" id="cart-close-btn">
+                <i class="fas fa-times fa-lg"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-yellow-700 mb-6">
+                Keranjang Belanja
+            </h3>
+            <div id="cart-items" class="space-y-4">
+                <p class="text-gray-600 text-center">
+                    Keranjang Anda kosong.
+                </p>
+            </div>
+            <div class="mt-6 border-t pt-4 flex justify-between items-center">
+                <span class="font-semibold text-yellow-700 text-lg" id="cart-total">
+                    Total: Rp0
+                </span>
+                <button class="bg-yellow-600 hover:bg-yellow-700 text-white font-semibold px-6 py-2 rounded transition disabled:opacity-50" disabled id="checkout-btn" type="button">
+                    Checkout
+                </button>
+            </div>
+        </div>
+    </div>
+    <!-- Checkout Modal -->
+    <div aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" id="checkout-modal">
+        <div class="bg-white rounded-lg shadow-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 relative">
+            <button aria-label="Tutup checkout" class="absolute top-4 right-4 text-yellow-600 hover:text-yellow-800 focus:outline-none" id="checkout-close-btn">
+                <i class="fas fa-times fa-lg"></i>
+            </button>
+            <h3 class="text-2xl font-bold text-yellow-700 mb-6">
+                Formulir Checkout
+            </h3>
+            <form class="space-y-6" id="checkout-form" novalidate>
+                <div>
+                    <label class="block text-yellow-700 font-semibold mb-2" for="fullName">
+                        Nama Lengkap
+                    </label>
+                    <input class="w-full border border-yellow-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" id="fullName" name="fullName" placeholder="Masukkan nama lengkap Anda" required type="text" />
+                    <p class="text-red-600 text-sm mt-1 hidden" id="error-fullName">Nama lengkap wajib diisi.</p>
+                </div>
+                <div>
+                    <label class="block text-yellow-700 font-semibold mb-2" for="emailCheckout">
+                        Email
+                    </label>
+                    <input class="w-full border border-yellow-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" id="emailCheckout" name="emailCheckout" placeholder="Masukkan email Anda" required type="email" />
+                    <p class="text-red-600 text-sm mt-1 hidden" id="error-emailCheckout">Email tidak valid.</p>
+                </div>
+                <div>
+                    <label class="block text-yellow-700 font-semibold mb-2" for="phone">
+                        Nomor Telepon
+                    </label>
+                    <input class="w-full border border-yellow-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" id="phone" name="phone" placeholder="Masukkan nomor telepon Anda" required type="tel" pattern="^[0-9+\-\s]{6,15}$" />
+                    <p class="text-red-600 text-sm mt-1 hidden" id="error-phone">Nomor telepon tidak valid.</p>
+                </div>
+                <div>
+                    <label class="block text-yellow-700 font-semibold mb-2" for="address">
+                        Alamat Pengiriman
+                    </label>
+                    <textarea class="w-full border border-yellow-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" id="address" name="address" placeholder="Masukkan alamat lengkap pengiriman" required rows="3"></textarea>
+                    <p class="text-red-600 text-sm mt-1 hidden" id="error-address">Alamat pengiriman wajib diisi.</p>
+                </div>
+                <div>
+                    <label class="block text-yellow-700 font-semibold mb-2" for="notes">
+                        Catatan (opsional)
+                    </label>
+                    <textarea class="w-full border border-yellow-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" id="notes" name="notes" placeholder="Masukkan catatan tambahan jika ada" rows="2"></textarea>
+                </div>
+                <div>
+                    <label class="block text-yellow-700 font-semibold mb-2" for="paymentMethod">
+                        Metode Pembayaran
+                    </label>
+                    <select class="w-full border border-yellow-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-yellow-500" id="paymentMethod" name="paymentMethod" required>
+                        <option value="" disabled selected>
+                            Pilih metode pembayaran
+                        </option>
+                        <option value="transfer">
+                            Transfer Bank
+                        </option>
+                        <option value="cod">
+                            Bayar di Tempat (COD)
+                        </option>
+                        <option value="e-wallet">
+                            E-Wallet (OVO, GoPay, Dana)
+                        </option>
+                    </select>
+                    <p class="text-red-600 text-sm mt-1 hidden" id="error-paymentMethod">Metode pembayaran wajib dipilih.</p>
+                </div>
+                <div class="border-t pt-4 flex justify-between items-center">
+                    <span class="font-semibold text-yellow-700 text-lg" id="checkout-total">
+                        Total Pembayaran: Rp0
+                    </span>
+                    <button class="bg-yellow-600 hover:bg-yellow-700 text-white font-semibold px-6 py-2 rounded transition" id="submit-checkout" type="submit">
+                        Bayar Sekarang
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- Thank You Modal -->
+    <div aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50" id="thankyou-modal">
+        <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative text-center">
+            <button aria-label="Tutup pesan terima kasih" class="absolute top-4 right-4 text-yellow-600 hover:text-yellow-800 focus:outline-none" id="thankyou-close-btn">
+                <i class="fas fa-times fa-lg"></i>
+            </button>
+            <i class="fas fa-check-circle text-green-600 text-6xl mb-4"></i>
+            <h3 class="text-2xl font-bold text-yellow-700 mb-2">
+                Terima Kasih!
+            </h3>
+            <p class="text-gray-700 mb-6" id="thankyou-message">
+                Pesanan Anda telah kami terima dan akan segera kami proses.
+            </p>
+            <button class="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-2 rounded transition" id="konfirmasi-btn" type="button">
+                Konfirmasi
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-yellow-700 text-yellow-100 py-6 mt-auto">
+        <div class="container mx-auto px-6 text-center">
+            <p>
+                © 2024 Oleh-Oleh Jogja. Semua hak cipta dilindungi.
+            </p>
+            <div class="mt-3 space-x-4">
+                <a aria-label="Instagram" class="hover:text-yellow-300" href="https://www.instagram.com/oleholehjogja25?igsh=MW1rNTJvcXV4cWFteQ==">
+                    <i class="fab fa-instagram fa-lg"></i>
+                </a>
+                <a aria-label="Tiktok" class="hover:text-yellow-300" href="https://www.tiktok.com/@oleholehjogja25?_t=ZS-8wgMAxhMbQH&_r=1">
+                    <i class="fab fa-tiktok fa-lg"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
